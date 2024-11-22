@@ -7,20 +7,9 @@ const socketIO = require('socket.io')
 const io = socketIO(server ,{
     cors : {
         origin : '*'
-    },
-    serverClient : true
+    }
 })
-
-io.of('/teacher').on('connection' , (socket) => {
-    socket.on('teacherClient' , (data) => {
-        console.log(data);
-    })
-    socket.emit('teacherServer' , 'hello teacher i am your server')
-})
-io.of('/student').on('connection' , (socket) => {
-    socket.on('studentClient' , (data) => {
-        console.log(data);
-    })
-    socket.emit('studentServer' , 'hello student i am your server')
+io.on('connection' , (socket) => {
+    socket.on('clientMessage' , data => console.log(data))
 })
 server.listen(3000 , () => console.log('run on port 3000'))
