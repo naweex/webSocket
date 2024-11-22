@@ -4,8 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .chatBox{
+            border: 3px solid tomato;
+            padding: 10px ;
+            margin: auto auto;
+            height: 500px;
+            width: 500px;
+        }
+        p{
+            border: 1px solid rgb(43, 128, 43);
+            padding: 3px;
+        }
+        #text{
+            width: 400px;
+            height: 33px;
+            padding: 5px;
+            margin: 3px;
+        }
+        #sendBtn{
+            width: 90px;
+            height: 33px;
+            padding: 5px;
+        }
+    </style>
 </head>
 <body>
-    <script src="server.js"></script>
+    <div class="chatBox">
+    </div>
+    <input type="text" placeholder="is typing..." id="text">
+    <input type="botton" value="send" id="sendBtn">
+    <script src="socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
 </body>
 </html>
