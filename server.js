@@ -10,6 +10,8 @@ const io = socketIO(server ,{
     }
 })
 io.on('connection' , (socket) => {
-    socket.on('clientMessage' , data => console.log(data))
+    socket.on('clientMessage' , data => {
+        io.emit('serverMessage' , data)
+    })
 })
 server.listen(3000 , () => console.log('run on port 3000'))
