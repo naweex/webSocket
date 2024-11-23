@@ -9,3 +9,9 @@ socket.on('connect' , data => {
     textBox.value = ''
     })
 })
+socket.on('serverMessage' ,message => {
+    const paragraphElement = document.createElement('p')
+    paragraphElement.innerText = message;
+    const chatBox = document.querySelector('.chatBox')
+    chatBox.appendChild(paragraphElement)
+})
