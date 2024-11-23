@@ -9,7 +9,7 @@
             text-align: center;
         }
         .chatBox{
-            border: 3px solid tomato;
+            border: 8px solid rgb(144, 30, 77);
             padding: 10px ;
             margin: auto auto;
             height: 500px;
@@ -20,16 +20,35 @@
             padding: 3px;
         }
         #text{
+            border: 5px solid rgb(35, 98, 125);
             width: 400px;
             height: 33px;
             padding: 5px;
             margin: 3px;
         }
         #sendBtn{
-            width: 90px;
-            height: 33px;
-            padding: 5px;
-        }
+            background-color: #c2fbd7;
+            border-radius: 100px;
+            box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+            color: green;
+            cursor: pointer;
+            display: inline-block;
+            font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+            padding: 7px 20px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 250ms;
+            border: 0;
+            font-size: 16px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+          }
+          
+          .button-33:hover {
+            box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+            transform: scale(1.05) rotate(-1deg);
+          }
     </style>
 </head>
 <body>
@@ -37,7 +56,7 @@
     </div>
     <input type="text" placeholder="is typing..." id="text">
     <input type="botton" value="send" id="sendBtn">
-    <script src="socket.io/socket.io.js"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.min.js"></script>
     <script src="client.js"></script>
 </body>
 </html>
