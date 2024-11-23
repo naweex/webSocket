@@ -4,7 +4,7 @@ const app = express();
 const server = http.createServer(app);
 app.use(express.static("./"))
 const socketIO = require('socket.io')
-const io = socketIO(server ,{
+const io = socketI(server ,{
     cors : {
         origin : '*'
     }
